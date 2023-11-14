@@ -6,6 +6,7 @@ module.exports = {
 
         await t
             .navigateTo('https://www.directferries.co.uk')
+            .maximizeWindow()
             .takeScreenshot('DirectFerries-HomePage.png')
     },
 

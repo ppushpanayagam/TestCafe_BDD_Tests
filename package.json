@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "test": "gherkin-testcafe chrome ./e2e/steps/** ./e2e/features/* --skip-js-errors"
+    "test": "gherkin-testcafe chrome ./src/steps/** ./src/features/* --skip-js-errors"
   },
   "dependencies": {
     "cucumber": "5.1.0",

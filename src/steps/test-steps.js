@@ -13,17 +13,30 @@ Given('I navigate to special offer page', async function () {
         .navigateToSpecialOfferPage();
 });
 
-When('I change the language to {string}', async function (language) {
-    console.log("****************************************************************: "+language.toString());
+When('I change the language to French', async function () {
+    
     await supportMethods
         .clickOnLanguageDropDown();
     await supportMethods
         .clickOnGivenLanguageFromTheList("France");
 });
 
-Then('I page language should change to {string}', async function (language) {
+When('I change the language to Italia', async function () {
+    
+    await supportMethods
+        .clickOnLanguageDropDown();
+    await supportMethods
+        .clickOnGivenLanguageFromTheList("Italia");
+});
+
+Then('I should see the language changed to French', async function () {
     
     await supportMethods.verifyCurrentCountryUrl('directferries.fr')
+});
+
+Then('I should see the language changed to Italia', async function () {
+    
+    await supportMethods.verifyCurrentCountryUrl('directferries.it')
 });
 
 Given('I navigage to the UK my account page', async function () {
