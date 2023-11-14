@@ -14,7 +14,16 @@ module.exports = {
 
         await t
             .click('#specialOffers')
+        await t
             .takeScreenshot('DirectFerries-SpecialOfferPage.png')
+    },
+
+    verifySpecialOfferPage: async function(){
+
+        await t
+            .expect(await Selector('[class="df-dom-ferry-offers-main-header-title"]')
+                .child('h1').innerText)
+                .contains('Cheap ferry | Latest ferry deals & offers | Direct Ferries')
     },
 
     clickOnLanguageDropDown: async function () {
@@ -25,6 +34,8 @@ module.exports = {
                 offsetX:            108,
                 offsetY:            16
             })
+        await t
+            .takeScreenshot('DirectFerries-CountryList.png')
     },
 
     clickOnGivenLanguageFromTheList: async function (language) {
@@ -114,17 +125,22 @@ module.exports = {
         const otherPassengersDetails = await Selector('.description')
             .withText('Child Passenger')
             .sibling('div').innerText;
-        await t.takeScreenshot('DirectFerries-OutBoundSailingBookingDetailsPage.png')
-        await t.expect(leadPassenerDetails).contains(leadPassengers);
-        await t.expect(otherPassengersDetails).contains(otherPassengers);
+        await t
+            .takeScreenshot('DirectFerries-OutBoundSailingBookingDetailsPage.png')
+        await t
+            .expect(leadPassenerDetails).contains(leadPassengers);
+        await t
+            .expect(otherPassengersDetails).contains(otherPassengers);
     },
+
     verifyOutBoundSailingVehicleDetails: async function(vehicles) {
 
         const vehicleDetails = await Selector('.description')
             .withText('Make & Model')
             .sibling('div').innerText;
         
-            await t.expect(vehicleDetails).contains(vehicles);
+        await t
+            .expect(vehicleDetails).contains(vehicles);
     }
 
 }

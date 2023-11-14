@@ -11,6 +11,8 @@ Given('I navigate to special offer page', async function () {
     
     await supportMethods
         .navigateToSpecialOfferPage();
+    await supportMethods
+        .verifySpecialOfferPage();
 });
 
 When('I change the language to French', async function () {
@@ -31,12 +33,14 @@ When('I change the language to Italia', async function () {
 
 Then('I should see the language changed to French', async function () {
     
-    await supportMethods.verifyCurrentCountryUrl('directferries.fr')
+    await supportMethods
+        .verifyCurrentCountryUrl('directferries.fr')
 });
 
 Then('I should see the language changed to Italia', async function () {
     
-    await supportMethods.verifyCurrentCountryUrl('directferries.it')
+    await supportMethods
+        .verifyCurrentCountryUrl('directferries.it')
 });
 
 Given('I navigage to the UK my account page', async function () {
