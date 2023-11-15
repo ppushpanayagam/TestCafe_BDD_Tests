@@ -1,0 +1,16 @@
+[
+    {
+        "myAccountPageUrl": "https://account.directferries.com/?culture=en-GB",
+        "userName": "qatesting@directferries.com",
+        "password": "DFP164826683",
+        "noOfOutBoundPassengers": "2",
+        "noOfOutBoundVehicles": "1",
+        "noOfInBoundPassengers": "1",
+        "noOfInBoundVehicles": "1",
+        "outSailingVehicleDetails": "Abarth 500 (Car)",
+        "leadPassengerDetails": "TestOne TestRD",
+        "otherPassengerDetails": "TestTwo TestRD",
+        "frenchLanguage": "France",
+        "italiaLanguage": "Italia"
+    }
+]
